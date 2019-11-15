@@ -17,14 +17,14 @@ export default class Timeline extends React.Component {
         {
           this.props.activities.map((item, index) => {
             if(this.isOdd(index) === 0) {
-              return (<div className="container left">
+              return (<div key={index} className="container left">
               <div className="content">
                 <h2>{item.date}</h2>
                 <p>{item.description}</p>
               </div>
             </div>)
             } else {
-              return (<div className="container right">
+              return (<div key={index} className="container right">
               <div className="content">
                 <h2>{item.date}</h2>
                 <p>{item.description}</p>
